@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hshacks-investment",
+  "private_key_id": "a60cb5d9bfb006c9b8cf4e3a9f77dcec34b996f1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDXUK57NZHNkw9h\nu6MK5POi1CCa2fqKEB2KgLpyDxCcoqbK3vA5KB+t/+Sk4YnkY232KBups4Rf+kQn\ntReZU9SnFdTjH+Zyo/xtid1JFIWThNivT+Dw+Ry15aHE/cdONcoyznxjuiIn8j7L\norI592VnvenVgUkYsI0+o+Epis2McaRfrRPjur1T4kkez6xM2pEkpwb61wRq9x0P\nCrL6i59/HigXXa68evu87e6FVpmjLsK4B9k2hM9/Weumb+A9/HAZRPtu0n4VVMsL\nJ35l8jQRTgIPC2TbwQ5LCOU1GuAVoYYRdfLh3F/Q8XtiYjcwZcx1kS8pGmaiCHl2\nRu8njzKpAgMBAAECggEAENW98WPqCgT2aMGsiP9cw1L1rQCKc9K4aeoQaeGeqWNC\n9PgYbUejWSNPDnXp+6xV3oTFS5qofilJvJcOs3jYAYEV+5+KEQBHDjjUz1AmSjdS\ntTu4I+8+XO80RlGXYe3tE4A3PpmWQ8Gk7PQZc6nRyRo9bGmm5vd1m7u227IpdH0Q\nxjeV79Ao6Ob9MrCED9EPvFGRBSH2fJcAjXODGgup+S1c/BhG77HtW0zRLE5u/beT\nXz87XJcssAyFscYRwEM7US24PfnObgqZv+zSDDWnpNQIkayZCiPIARt9eS7nZpTY\njo7dvNwoNI/08RlmyAK8J7PSWI92dMtgOglodBeG2QKBgQD3FkVs0YMRlYzBZHlb\nHmfvhdz3w4+ddZKCi0IXDSxI4ZiAcq7/wjA30lxk8HNjDtRm06P+L6Uw+nJZn9Br\nfW5mcys9ycZwIPFS5nUUkSgddoT/2pFn4LxlGEwyswaoO73skY3J7jGZ9UDNBqgz\nuL25AA0kK++p9eG5HKhlrVzQfQKBgQDfFQNLE3pwUFIC6Q4dAdx51Wm+8kCrGbjp\nQuh/Rc3H5dJIzk91nhDLENZGRZjEajV8CH9E/bzKvzrdjtUJReWt1hwRYAi+yPbL\nDtPv/tp3M61JS4qDmcxGTQhbT+SC2WKuUiGddl2w0HdYHgsA7IK5Hnibr3b5YHrM\nb6+ukFaOnQKBgCiczIR6W2TEhAI1lYzYjpTcF9nRlwV2kcJLSW2oiKLiEcLrFsCL\nFonWVcFxlEWv5lGQb+ATzL8kKy94CTXhxAeq3mylgaxkfcX2g0ACK+nL1UiIkGXW\nlqC3Qa8DphB44VrFAd0y/Ywkt6X7diIqN2T1ETPk1NvGwnc+sp8jw6GxAoGBAJU/\nc7KY14Oo2RWFYqHZiu4f792GKenPDb1RvEbaJrCke6mmDdc85zNUkmb1TR2riRjw\nfmVj9RkYE4QDeVf44Y8J/kFJpNAvl52G0BhywyqY8khlN8iP7vDhvMOKkfFRCwph\nfIfilxAiiJX1k5sMoPDFCB/wpoJ1H/MCjeEWRDKpAoGBAIBfWpveup2LMji99clD\nLBDB+Gluc1SWNpXWr6f38AcNQ+Lt1PveL3SAq/rz22djjjzgyjIGMWxpiH7ePpD/\nZ/F5CXlGjv7Hr39ia6SE5pymsYZpzg1L6Prot53y1CuASSGPGF4oAm1PLxw00rxu\n97TOa2zN/OISeOn6lec4YYK+\n-----END PRIVATE KEY-----\n",
+  "client_email": "redditinvestor@hshacks-investment.iam.gserviceaccount.com",
+  "client_id": "109454649956883261018",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/redditinvestor%40hshacks-investment.iam.gserviceaccount.com"
+}
