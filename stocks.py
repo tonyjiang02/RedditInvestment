@@ -10,6 +10,8 @@ names=[]
 def __init__():
     main()
 def readIntoRows(nameofcsv):
+    global symbols
+    global names
     with open(nameofcsv) as csvfile:
         filereader = csv.reader(csvfile, delimiter =',')
         first = True
@@ -19,7 +21,8 @@ def readIntoRows(nameofcsv):
                 continue
             symbols.append(row[0])
             names.append(row[1])
-            print(len(symbols))
+        symbols = sorted(symbols)
+        names = sorted(names)
 
 
 def main():
