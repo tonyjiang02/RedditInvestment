@@ -23,8 +23,7 @@ def readSub(subreddit,sorter,number):
         for top_level_comment in submission.comments:
             all+=top_level_comment.body+" "
             for second_level_comment in top_level_comment.replies:
-                all+=top_level_comment.body+ " "
+                all+=second_level_comment.body+ " "
                 for third_level_comment in second_level_comment.replies:
-                    all+=top_level_comment.body+ " "
+                    all+=third_level_comment.body+ " "
     return all
-print(readSub("thinkpad","top",1))

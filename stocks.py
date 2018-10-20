@@ -19,7 +19,6 @@ def readIntoRows(nameofcsv):
                 continue
             symbols.append(row[0])
             names.append(row[1])
-            print(len(symbols))
 
 
 def main():
