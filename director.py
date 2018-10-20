@@ -3,6 +3,7 @@ import stocks
 import nltk
 from nltk import word_tokenize 
 import operator
+from collections import OrderedDict
 def binarySearch(arr, target, lo=0, hi=None):
     if hi is None:
         hi = len(arr)
@@ -34,5 +35,5 @@ for stuff in tokenize:
 #         else:
 #             dictionary[stuff]=1
 
-sortedDictionary = sorted(dictionary.items(), key=operator.itemgetter(1), reverse = True)
+sortedDictionary = OrderedDict(sorted(dictionary.items(), key=operator.itemgetter(1), reverse = True))
 
