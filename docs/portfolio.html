@@ -11,7 +11,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src = "main.js"></script>
+    <script src = "main2.js"></script>
     <link rel="stylesheet"  href= "styles.css" type="text/css">
 </head>
 <body>
@@ -21,22 +21,35 @@
             <a class="navbar-brand" href="#">Reddit Investor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="trends.html">Trends</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Portfolio</a></li>
+            <li><a href="trends.html">Trends</a></li>
             </ul>
         </div>
     </nav>
 
 
-    <h1><strong>Reddit Investing</strong></h1>
-    <div id="names">By Tony Jiang, Victor Lee, and Mathew Luo</div>
+    <h1><strong>Portfolio</strong></h1>
 
-    <div id = "most_common">
-        <div class=row id = "main-row">
-            <div class = "col-md-4">Stock Symbol</div>
-            <div class = "col-md-4">Mentions</div>
-            <div class = "col-md-4"">Sentiment</div>
+    <h2>Current Stocks</h2>
+
+    <div id = "most_common2">
+        <div class="row2" id = "main-row2">
+            <div class = "col-md-3">Stock Symbol</div>
+            <div class = "col-md-3">Buy Price</div>
+            <div class = "col-md-3"">Quantity</div>
+            <div class = "col-md-3"">Trade Type</div>
+        </div>
+    </div>
+    <h2 style="margin-top:15px;">History</h2>
+    <div id = "most_common3">
+        <div class="row3" id = "main-row3">
+            <div class = "col-md-2">Stock Symbol</div>
+            <div class = "col-md-2">Buy Price</div>
+            <div class = "col-md-2">Sell Price</div>
+            <div class = "col-md-2">Quantity</div>
+            <div class = "col-md-2">Profit</div>
+            <div class = "col-md-2">Trade Type</div>
         </div>
     </div>
 </body>
