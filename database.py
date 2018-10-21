@@ -23,4 +23,11 @@ def uploadData(dict,subreddit, date):
         u'mentions':men,
         u'sentiment':sent
     })
-uploadData(dictionary, "stocks", "10-20")
+# uploadData(dictionary, "stocks", "10-20")
+
+def getData(stock, date1, date2):
+    doc_ref = db.collection(u''+stock).document(u''+date1)
+    doc = doc_ref.get()
+    dict1 = doc.to_dict()
+    # print(dict1['stock'])
+    return [dict1, dict2]
