@@ -52,6 +52,3 @@ def calculateProfit(currPrice, stock_object):
         return currPrice*stock_object["quantity"] - stock_object["buyprice"]*stock_object["quantity"]
     # if(tradeType=="short"):
     #     return stock_object.buyprice*quantity-price*quantity
-
-buy("GOOG",12)
-sell(2)

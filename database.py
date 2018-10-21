@@ -9,12 +9,12 @@ db = firestore.client()
 print("init database")
 
 
-def uploadData(dict,subreddit, date):
+def uploadData(dictionary,subreddit, date):
     print("upload data")
     doc_ref = db.collection(u''+subreddit).document(u''+ date)
-    keys = dict.keys()
-    men = [a.mentions for a in dict.values()]
-    sent = [a.sentiment for a in dict.values()]
+    keys = list(dictionary.keys())
+    men = [a.mentions for a in dictionary.values()]
+    sent = [a.sentiment for a in dictionary.values()]
     
     doc_ref.set({
         u'stock':keys,
@@ -39,7 +39,6 @@ def getPortfolio():
     history_arr = []
     portfolio_arr = []
     for doc in history_ref:
-        print("one")
         history_arr.append(doc)
     for doc in portfolio_ref:
         portfolio_arr.append(doc)

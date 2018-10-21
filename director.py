@@ -23,34 +23,33 @@ keypos=["buy", "call", "hold"]
 keyneg=["sell", "put"]
 symbols = stocks.symbols
 names = stocks.names
-curr = main.readSub("stocks","hot",10)
-dictionary = {}
-count = 0
-for element in curr:
-    tokenize= word_tokenize(element)
+def process(sub,sort,num):
+    curr = main.readSub(sub,sort,num)
+    dictionary = {}
     count = 0
-    mentions = []
-    for item in tokenize:
-        if(len(item) > 1 and binarySearch(symbols,item, 0, None) > 0):
-            if(item in dictionary):
-                dictionary[item].mentions+=1
-                if(item not in mentions):
-                    mentions.append(item)
-            else: 
-                dictionary[item] = Ticker(item,1,0)
-        elif item in keypos:
-            count +=1
-        elif item in keyneg:
-            count -=1 
-    for stuff in mentions:
-        if(count>0):
-            dictionary[stuff].sentiment+=1
-        elif(count <0):
-            dictionary[stuff].sentiment-=1
-dictionarySort = OrderedDict(sorted(dictionary.items(), key=lambda i: i[1].mentions, reverse = True))
-
-for k in dictionarySort.keys():
-    print(dictionarySort[k].toString())
+    for element in curr:
+        tokenize= word_tokenize(element)
+        count = 0
+        mentions = []
+        for item in tokenize:
+            if(len(item) > 1 and binarySearch(symbols,item, 0, None) > 0):
+                if(item in dictionary):
+                    dictionary[item].mentions+=1
+                    if(item not in mentions):
+                        mentions.append(item)
+                else: 
+                    dictionary[item] = Ticker(item,1,0)
+            elif item in keypos:
+                count +=1
+            elif item in keyneg:
+                count -=1 
+        for stuff in mentions:
+            if(count>0):
+                dictionary[stuff].sentiment+=1
+            elif(count <0):
+                dictionary[stuff].sentiment-=1
+    dictionarySort = OrderedDict(sorted(dictionary.items(), key=lambda i: i[1].mentions, reverse = True))
+    return dictionarySort
 # tokenize = word_tokenize(curr)
 # dictionary = {}
 # for stuff in tokenize:
