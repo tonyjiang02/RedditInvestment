@@ -28,6 +28,21 @@ def uploadData(dict,subreddit, date):
 def getData(stock, date1, date2):
     doc_ref = db.collection(u''+stock).document(u''+date1)
     doc = doc_ref.get()
+    doc_ref2 = db.collection(u''+stock).document(u''+date2)
+    doc2 = doc_ref2.get()
     dict1 = doc.to_dict()
+    dict2 = doc2.to_dict()
     # print(dict1['stock'])
     return [dict1, dict2]
+def getPortfolio():
+    doc_ref = db.collection(u'portfolio').document(u'portfolio1')
+    doc = doc_ref.get()
+    dict1 = doc.to_dict()
+    return dict1
+def uploadPortfolio(balance, portfolio, history):
+    doc_ref = db.collection(u'portfolio').document(u'portfolio1')
+    doc_ref.set({
+        u'balance':balance,
+        u'portfolio':portfolio,
+        u'history':history
+    })

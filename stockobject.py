@@ -1,6 +1,6 @@
 class stockObject:
 
-    def __init__(self ,symbol,quantity,buyprice, buydate, tradetype):
+    def __init__(self,symbol,quantity,buyprice, buydate, tradetype):
         self.symbol = symbol
         self.quantity = quantity
         self.buyprice = buyprice
