@@ -49,7 +49,7 @@ def sell(id):
     price = getPrice(stock_object["symbol"])
     if(price!=0):
         profit = calculateProfit(price,stock_object)
-        balance+=profit
+        balance+=price*stock_object["quantity"]
         stock_sold = soldObject(stock_object["symbol"],stock_object["quantity"],stock_object["buyprice"],price,stock_object["buydate"],datetime.date,stock_object["tradetype"],profit)
         database.deletePortfolio(id)
         historyid=historyid+1

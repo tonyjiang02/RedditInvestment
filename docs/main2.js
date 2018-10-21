@@ -18,7 +18,14 @@ getDoc(function(data){
 getDoc2(function(data){
     addData2(data);
 })
-
+getBalance(function(data){
+    addBalance(data);
+})
+function addBalance(data){
+    console.log(data["balance"])
+    var ele = document.getElementById("balance")
+    ele.innerHTML = "Current Balance: "+data["balance"]
+}
 function addData(data){
     console.log(data["symbol"])
     console.log("adding data")
@@ -124,4 +131,12 @@ function getDoc2(callback){
             // doc.data() is never undefined for query doc snapshots
         });
     });
+}
+function getBalance(callback){
+    console.log("getting balance")
+    var docRef = db.collection("portfolio").doc("portfolio1")
+    docRef.get().then(function(doc) {
+        data = doc.data()
+        callback(data)
+    })
 }

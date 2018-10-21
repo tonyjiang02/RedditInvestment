@@ -48,7 +48,6 @@ function getDoc(callback){
     data = {}
     docRef.get().then(function(doc) {
         if (doc.exists) {
-            console.log(doc.data)
             data = doc.data()
             callback(data)
         } else {

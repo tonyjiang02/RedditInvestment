@@ -4,7 +4,7 @@ import numpy
 from ticker import Ticker
 import trader
 import time
-sortedDict = director.process("stocks","hot",10)
+sortedDict = director.process("stocks","hot",50)
 database.uploadData(sortedDict,"stocks","10-20")
 tickers = []
 symbols = list(sortedDict.keys())
@@ -35,4 +35,4 @@ for t in staged:
     print(t.getTag())
     print(t.getZScore())
     trader.buy(t.getTag(), round(t.getZScore()))
-    time.sleep(0.1)
+    time.sleep(5)
