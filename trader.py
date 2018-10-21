@@ -20,11 +20,13 @@ def getPrice(ticket):
     return data.head(1)['4. close'][0]
 def buy(symbol, quantity):
     global balance
+    global portfolioid
     price = getPrice(symbol)
     stock_object = stockObject(symbol,quantity,price,datetime.date,"buy")
     database.uploadPortfolio(stock_object,portfolioid)
     balance -= quantity*price
-    database.updateVars(balance,historyid,portfolioid+1)
+    portfolioid=portfolioid+1
+    database.updateVars(balance,historyid,portfolioid)
 # def short(symbol,quantity):
 #     global balance
 #     price = getPrice(symbol)
@@ -34,6 +36,7 @@ def buy(symbol, quantity):
 def sell(id):
     global balance
     global portfolio
+    global historyid
     stock_object = {}
     for doc in portfolio:
         if(doc.id == str(id)):
@@ -44,8 +47,9 @@ def sell(id):
     balance+=profit
     stock_sold = soldObject(stock_object["symbol"],stock_object["quantity"],stock_object["buyprice"],price,stock_object["buydate"],datetime.date,stock_object["tradetype"],profit)
     database.deletePortfolio(id)
+    historyid=historyid+1
     database.uploadHistory(stock_sold,historyid)
-    database.updateVars(balance,historyid+1,portfolioid)
+    database.updateVars(balance,historyid,portfolioid)
 
 def calculateProfit(currPrice, stock_object):
     if(stock_object["tradetype"]=="buy"):
