@@ -15,6 +15,11 @@ var db = firebase.firestore();
 getDoc(function(data){
     addData(data)
 })
+
+function Test() {
+    alert("hello");
+}
+
 function addData(data) {
     var div = document.getElementById("most_common")
     var stock = data["stock"]
